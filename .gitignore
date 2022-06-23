@@ -1,0 +1,7 @@
+
+# Log files
+*.ini
+
+
+# key files
+*.json
