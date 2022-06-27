@@ -1,0 +1,50 @@
+
+- Dataframe descriptive table
+
+The following formulas should compute basic statistics on the integer columns of the dataset:
+
+count
+ArrayFormula(MAX((dataframe![column_range]<>"")*(ROW(dataframe![column_range]))))
+
+mean
+AVERAGE(dataframe![column_range])
+
+standard deviation
+STDEV(dataframe![column_range])
+
+min value
+MIN(dataframe![column_range])
+
+1st quartile
+QUARTILE(dataframe![column_range],1)
+
+2nd quartile
+QUARTILE(dataframe![column_range],2)
+
+3rd quartile
+QUARTILE(dataframe![column_range],3)
+
+max value
+MAX(dataframe![column_range])
+
+The column ranges corresponds to the columns were are the integer values, if is the column A (age column), the range of the formula must be A:A
+
+- Queries
+
+How is distributed the capital gain per range of ages?
+QUERY(dataframe![dataframe_range],"select B,sum(L) group by B order by sum(L) desc",1)
+
+How many there are by workclass?
+QUERY(dataframe![dataframe_range],"select C,count(A) group by C order by count(A) desc",1)
+
+Which are the top occupations by workclass?
+QUERY(dataframe![dataframe_range],"select H,C,count(A) where C='Private' group by H,C order by count(A) desc",1)
+
+Which is the sex with more capital gain?
+QUERY(dataframe![dataframe_range],"select K,sum(L) group by K order by sum(L) desc",1)
+
+Which is the most profitable education status?
+QUERY(dataframe![dataframe_range],"select E,sum(L) group by E order by sum(L) desc",1)
+
+- Calculated dimension
+=IFS(AND(A2>10,A2<=20),"under 20 years",AND(A2>20,A2<=40),"between 20 - 40 years",AND(A2>40,A2<=60),"between 40 - 60 years",AND(A2>60,A2<=80),"between 60 - 80 years",AND(A2>80,A2<=90),"more than 90 years")
