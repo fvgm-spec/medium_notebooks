@@ -1,0 +1,6 @@
+boto3==1.28.42
+duckdb==0.8.1
+PyDriller==2.5.1
+pandas==2.1.0
+pyarrow==12.0.1
+s3fs==2023.9.0
