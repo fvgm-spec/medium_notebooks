@@ -1,0 +1,9 @@
+# Visit https://docs.rilldata.com/ to learn more about Rill code files.
+
+type: "s3"
+uri: "s3://rilldata/netflix-watch-log/All_Devices.csv"
+# Workaround for caching problem
+extract:
+  files:
+    strategy: tail
+    size: 1
