@@ -2,4 +2,4 @@
 
 ### Basic setup
 
-  ![cover_image](img/rill.png)
+  ![cover_image](../img/rill.png)
