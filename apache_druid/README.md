@@ -1,5 +1,8 @@
 ## Learning Apache Druid
 
+  ![Druid_logo](img/druid_logo.png)
+
+
 ### Quickstart guide
 
 #### Installing Druid
