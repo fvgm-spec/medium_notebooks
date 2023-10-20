@@ -1,7 +1,10 @@
 ## Learning Apache Druid
 
-  ![Druid_logo](img/druid_logo.png)
-
+ <p>
+<div class="column">
+    <img src="img/druid_logo.png" style="height: 15rem"/>
+  </div>
+ </p>
 
 ### Quickstart guide
 
