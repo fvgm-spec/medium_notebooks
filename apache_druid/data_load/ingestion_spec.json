@@ -19,7 +19,7 @@
         }
       },
       "dataSchema": {
-        "dataSource": "wikiticker-2015-09-12-sampled",
+        "dataSource": "wikipedia",
         "timestampSpec": {
           "column": "time",
           "format": "iso"
