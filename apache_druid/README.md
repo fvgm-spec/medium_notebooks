@@ -76,6 +76,15 @@ bin/post-index-task --file quickstart/tutorial/wikipedia-top-pages.json --url ht
 
 This script assumes that you are ingesting the file called `rollup-index.json` located in *quickstart/tutorial/* folder.
 
+Druid's [official documentation](https://druid.apache.org/docs/latest/ingestion/ingestion-spec) has a lot more details about the sections in a spec file.
+
+#### Qurying data
+
+Once you have loaded data into your Druid cluster following one of the methods described above, you can check that your data is available in the cluster by going to *Datasources* tab in the console, in order to query that data you will need to go to the Query tab, and then open a new query editor tab and there click on any of the columns to insert one of the pre-builts aggregation queries, which os a very nice Druid's native feature: 
+
+  ![querying_data](img/querying_data.png)
+
+
 
 
 
