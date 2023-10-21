@@ -36,5 +36,23 @@ After starting the Druid services, open the web console at http://localhost:8888
   ![Druid_UI](img/druid_console.png)
 
 
-### [Querying data](https://druid.apache.org/docs/latest/tutorials/tutorial-batch/#loading-data-with-a-spec-via-console)
+### [Loading data](https://druid.apache.org/docs/latest/tutorials/tutorial-batch/#loading-data-with-a-spec-via-console)
+
+You can load data in your Druid cluster using the console, batch ingestion through a spec task, and using a script from the Druid installation files.
+
+#### Loading data through the console
+
+The Druid distribution bundles the `wikiticker-2015-09-12-sampled.json.gz` sample dataset that you can use for testing. The sample dataset is located in the *quickstart/tutorial/* folder, accessible from the Druid root directory, and represents Wikipedia page edits for a given day.
+
+Follow these steps to load the sample Wikipedia dataset:
+
+1. In the Query view, click Connect external data.
+
+2. Select the Local disk tile and enter the following values:
+
+Base directory: `quickstart/tutorial/`
+
+File filter: `wikiticker-2015-09-12-sampled.json.gz`
+
+  ![Druid_UI](img/loading_data_through_console.png)
 
