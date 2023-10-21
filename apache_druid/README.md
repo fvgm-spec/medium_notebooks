@@ -36,7 +36,7 @@ After starting the Druid services, open the web console at http://localhost:8888
   ![Druid_UI](img/druid_console.png)
 
 
-### [Loading data](https://druid.apache.org/docs/latest/tutorials/tutorial-batch/#loading-data-with-a-spec-via-console)
+### [Loading_data](https://druid.apache.org/docs/latest/tutorials/tutorial-batch/#loading-data-with-a-spec-via-console)
 
 You can load data in your Druid cluster using the console, batch ingestion through a spec task, and using a script from the Druid installation files.
 
@@ -54,5 +54,28 @@ Base directory: `quickstart/tutorial/`
 
 File filter: `wikiticker-2015-09-12-sampled.json.gz`
 
-  ![Druid_UI](img/loading_data_through_console.png)
+  ![load_data](img/loading_data_through_console.png)
+
+#### Loading data through a spec file
+
+You can also submit an ingestion task spec to the Druid Overlord. You can write ingestion specs by hand or using the data loader built into the web console.
+
+Once you have prepared an ingestion spec like the one loaded in the [data_load folder of this repo](https://github.com/fvgm-spec/medium_notebooks/tree/main/apache_druid/data_load) you can be able to start a batch ingestion task spec in the console by going to Tasks >> 3 dots and then `submit JSON task` 
+
+  ![submit_spec](img/submitting_spec_file.png)
+
+#### Loading data through a script
+
+Druid package includes a batch ingestion helper script at `bin/post-index-task`. This script will POST an ingestion task to the Druid Overlord at port 8081.
+
+You can run the following command from Druid package root:
+
+```bash
+bin/post-index-task --file quickstart/tutorial/wikipedia-top-pages.json --url http://localhost:8081
+```
+
+This script assumes that you are ingesting the file called `rollup-index.json` located in *quickstart/tutorial/* folder.
+
+
+
 
